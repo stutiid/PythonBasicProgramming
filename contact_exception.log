@@ -1,0 +1,18 @@
+ERROR:root:INVALID exception occurred dur to entered invalid zipcode
+Traceback (most recent call last):
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 155, in <module>
+    contacts = Contact(contact_details_list)
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 20, in __init__
+    self.zipcode = contact_details[5]
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 113, in zipcode
+    raise ContactException(ContactException.exception_type[2], "entered invalid zipcode")
+contact_custom_exception.ContactException: INVALID exception occurred dur to entered invalid zipcode
+ERROR:root:ENTERED_EMPTY exception occurred dur to entered empty city name
+Traceback (most recent call last):
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 155, in <module>
+    contacts = Contact(contact_details_list)
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 18, in __init__
+    self.city = contact_details[3]
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 78, in city
+    raise ContactException(ContactException.exception_type[1], "entered empty city name")
+contact_custom_exception.ContactException: ENTERED_EMPTY exception occurred dur to entered empty city name

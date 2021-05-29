@@ -2,6 +2,7 @@ import logging
 import re
 from contact_custom_exception import ContactException
 
+logging.basicConfig(filename='contact_exception.log', encoding='utf-8', level=logging.ERROR)
 """
 Class represents a person contact with details like name with first name and last name, address details of person like
 area address, its city, its state and zipcode of that city and other contact details like mobile number and email
@@ -148,10 +149,10 @@ class Contact:
 
 
 if __name__ == '__main__':
-    logger = logging.getLogger("logger")
+    # logger = logging.getLogger("logger")
     try:
         contact_details_list = ['Landon', 'Kirby', '7 Fox Hill', 'Margao', 'Goa', 403602, 9878654534, 'kirby@gmail.com']
         contacts = Contact(contact_details_list)
         print(contacts.__str__())
     except ContactException as ex:
-        logger.exception(ex.__str__())
+        logging.exception(ex.__str__())

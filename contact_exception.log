@@ -16,3 +16,60 @@ Traceback (most recent call last):
   File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 78, in city
     raise ContactException(ContactException.exception_type[1], "entered empty city name")
 contact_custom_exception.ContactException: ENTERED_EMPTY exception occurred dur to entered empty city name
+ERROR:root:INVALID exception occurred dur to entered invalid mobile
+Traceback (most recent call last):
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 148, in <module>
+    contacts = Contact(contact_details_list)
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 22, in __init__
+    self.mobile = contact_details[6]
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 122, in mobile
+    raise ContactException(ContactException.exception_type[2], "entered invalid mobile")
+contact_custom_exception.ContactException: INVALID exception occurred dur to entered invalid mobile
+ERROR:root:##################################################
+Traceback (most recent call last):
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 148, in <module>
+    contacts = Contact(contact_details_list)
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 17, in __init__
+    self.last_name = contact_details[1]
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 49, in last_name
+    raise ContactException(ContactException.exception_type[1], "entered empty last name")
+contact_custom_exception.ContactException: ENTERED_EMPTY exception occurred dur to entered empty last name
+ERROR:root:ENTERED_EMPTY exception occurred dur to entered empty last name
+Traceback (most recent call last):
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 148, in <module>
+    contacts = Contact(contact_details_list)
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 17, in __init__
+    self.last_name = contact_details[1]
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 49, in last_name
+    raise ContactException(ContactException.exception_type[1], "entered empty last name")
+contact_custom_exception.ContactException: ENTERED_EMPTY exception occurred dur to entered empty last name
+ERROR:root:ENTERED_EMPTY exception occurred dur to entered empty last name
+Traceback (most recent call last):
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 148, in <module>
+    contacts = Contact(contact_details_list)
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 17, in __init__
+    self.last_name = contact_details[1]
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 49, in last_name
+    raise ContactException(ContactException.exception_type[1], "entered empty last name")
+contact_custom_exception.ContactException: ENTERED_EMPTY exception occurred dur to entered empty last name
+INFO:root:###################################
+ERROR:root:ENTERED_EMPTY exception occurred dur to entered empty last name
+Traceback (most recent call last):
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 148, in <module>
+    contacts = Contact(contact_details_list)
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 17, in __init__
+    self.last_name = contact_details[1]
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 49, in last_name
+    raise ContactException(ContactException.exception_type[1], "entered empty last name")
+contact_custom_exception.ContactException: ENTERED_EMPTY exception occurred dur to entered empty last name
+INFO:root:###############################################################
+ERROR:root:ENTERED_EMPTY exception occurred dur to entered empty last name
+Traceback (most recent call last):
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 148, in <module>
+    contacts = Contact(contact_details_list)
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 17, in __init__
+    self.last_name = contact_details[1]
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 49, in last_name
+    raise ContactException(ContactException.exception_type[1], "entered empty last name")
+contact_custom_exception.ContactException: ENTERED_EMPTY exception occurred dur to entered empty last name
+INFO:root:contact( name=>Landon Kirby, address=>7 Fox Hill, city=>Margao,state=>Goa, zipcode=>403602, mobile=>9878654534, email=>kirby@gmail.com)

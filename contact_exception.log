@@ -73,3 +73,23 @@ Traceback (most recent call last):
     raise ContactException(ContactException.exception_type[1], "entered empty last name")
 contact_custom_exception.ContactException: ENTERED_EMPTY exception occurred dur to entered empty last name
 INFO:root:contact( name=>Landon Kirby, address=>7 Fox Hill, city=>Margao,state=>Goa, zipcode=>403602, mobile=>9878654534, email=>kirby@gmail.com)
+INFO:root:contact( name=>Landon Kirby, address=>7 Fox Hill, city=>Margao,state=>Goa, zipcode=>403602, mobile=>9878654534, email=>kirby@gmail.com)
+INFO:contact_info:contact( name=>Landon Kirby, address=>7 Fox Hill, city=>Margao,state=>Goa, zipcode=>403602, mobile=>9878654534, email=>kirby@gmail.com)
+ERROR:contact_info:ENTERED_NULL exception occurred dur to please give some input
+Traceback (most recent call last):
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 148, in <module>
+    contacts = Contact(contact_details_list)
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 19, in __init__
+    self.address = contact_details[2]
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 63, in address
+    raise ContactException(ContactException.exception_type[0], "please give some input")
+contact_custom_exception.ContactException: ENTERED_NULL exception occurred dur to please give some input
+ERROR:contact_info:ENTERED_NULL exception occurred due to None input, please give some input
+Traceback (most recent call last):
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 148, in <module>
+    contacts = Contact(contact_details_list)
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 19, in __init__
+    self.address = contact_details[2]
+  File "C:\Users\stuti\PythonProjects_Pycharm\DemoProject\contact.py", line 63, in address
+    raise ContactException(ContactException.exception_type[0], "None input, please give some input")
+contact_custom_exception.ContactException: ENTERED_NULL exception occurred due to None input, please give some input

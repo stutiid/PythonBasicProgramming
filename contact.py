@@ -3,6 +3,7 @@ import re
 from contact_custom_exception import ContactException
 
 logging.basicConfig(filename='contact_exception.log', encoding='utf-8', level=logging.INFO)
+logger = logging.getLogger('contact_info')
 """
 Class represents a person contact with details like name with first name and last name, address details of person like
 area address, its city, its state and zipcode of that city and other contact details like mobile number and email
@@ -29,7 +30,7 @@ class Contact:
     @first_name.setter
     def first_name(self, value):
         if value is None:
-            raise ContactException(ContactException.exception_type[0], "please give some input")
+            raise ContactException(ContactException.exception_type[0], "None input, please give some input")
         if len(value) == 0:
             raise ContactException(ContactException.exception_type[1], "entered empty first name")
         if re.fullmatch('^[A-Z][a-z]{2,20}$', value):
@@ -44,7 +45,7 @@ class Contact:
     @last_name.setter
     def last_name(self, value):
         if value is None:
-            raise ContactException(ContactException.exception_type[0], "please give some input")
+            raise ContactException(ContactException.exception_type[0], "None input, please give some input")
         if len(value) == 0:
             raise ContactException(ContactException.exception_type[1], "entered empty last name")
         if re.fullmatch('^[A-Z][a-z]{2,}$', value):
@@ -59,7 +60,7 @@ class Contact:
     @address.setter
     def address(self, value):
         if value is None:
-            raise ContactException(ContactException.exception_type[0], "please give some input")
+            raise ContactException(ContactException.exception_type[0], "None input, please give some input")
         if len(value) == 0:
             raise ContactException(ContactException.exception_type[1], "entered empty address")
         else:
@@ -72,7 +73,7 @@ class Contact:
     @city.setter
     def city(self, value):
         if value is None:
-            raise ContactException(ContactException.exception_type[0], "please give some input")
+            raise ContactException(ContactException.exception_type[0], "None input, please give some input")
         if len(value) == 0:
             raise ContactException(ContactException.exception_type[1], "entered empty city name")
         if re.fullmatch('^[A-Z][a-z]{2,}$', value):
@@ -87,7 +88,7 @@ class Contact:
     @state.setter
     def state(self, value):
         if value is None:
-            raise ContactException(ContactException.exception_type[0], "please give some input")
+            raise ContactException(ContactException.exception_type[0], "None input, please give some input")
         if len(value) == 0:
             raise ContactException(ContactException.exception_type[1], "entered empty state name")
         if re.fullmatch('^[A-Z][a-z]{2,}$', value):
@@ -102,7 +103,7 @@ class Contact:
     @zipcode.setter
     def zipcode(self, value):
         if value is None:
-            raise ContactException(ContactException.exception_type[0], "please give some input")
+            raise ContactException(ContactException.exception_type[0], "None input, please give some input")
         if re.fullmatch('^[1-9][0-9]{5}$|^[1-9][0-9]{2} [0-9]{3}$', str(value)):
             self._zipcode = value
         else:
@@ -115,7 +116,7 @@ class Contact:
     @mobile.setter
     def mobile(self, value):
         if value is None:
-            raise ContactException(ContactException.exception_type[0], "please give some input")
+            raise ContactException(ContactException.exception_type[0], "None input, please give some input")
         if re.fullmatch('^[1-9][0-9]{9}$|^[0-9]{2}[1-9][0-9]{9}$|^\\+[0-9]{2}[1-9][0-9]{9}$', str(value)):
             self._mobile = value
         else:
@@ -128,7 +129,7 @@ class Contact:
     @email.setter
     def email(self, value):
         if value is None:
-            raise ContactException(ContactException.exception_type[0], "please give some input")
+            raise ContactException(ContactException.exception_type[0], "None input, please give some input")
         if len(value) == 0:
             raise ContactException(ContactException.exception_type[1], "entered empty email address")
         if re.fullmatch('^(\\w|.|_|-)+[@](\\w|_|-|.)+[.]\\w{2,3}$', value):
@@ -143,8 +144,8 @@ class Contact:
 
 if __name__ == '__main__':
     try:
-        contact_details_list = ['Landon', 'Kirby', '7 Fox Hill', 'Margao', 'Goa', 403602, 9878654534, 'kirby@gmail.com']
+        contact_details_list = ['Landon', 'Kirby', None, 'Margao', 'Goa', 403602, 9878654534, 'kirby@gmail.com']
         contacts = Contact(contact_details_list)
-        logging.info(contacts.__str__())
+        logger.info(contacts.__str__())
     except ContactException as ex:
-        logging.exception(ex.__str__())
+        logger.exception(ex.__str__())

@@ -6,4 +6,4 @@ class ContactException(Exception):
         self.message = message
 
     def __str__(self):
-        return self.exception_type + " exception occurred dur to " + self.message
+        return self.exception_type + " exception occurred due to " + self.message
